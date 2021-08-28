@@ -18,7 +18,7 @@
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
 # Inherit RohieOS product configuration
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -37,13 +37,13 @@ BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/re
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_jasmine_sprout
+PRODUCT_NAME := xdroid_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
-# Inherit RohieOS Official build stuff.
-ROHIE_MAINTAINER := ParasBansal25
-ROHIE_BUILD_TYPE := OFFICIAL
+# Inherit xD build stuff.
+XDROID_UI_BLUR := true
+XDROID_BUILD_TYPE := OBT
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
