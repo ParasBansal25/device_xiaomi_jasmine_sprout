@@ -17,10 +17,8 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit some common stuff from Project-Awaken
-AWAKEN_BUILD_TYPE := OFFICIAL
-$(call inherit-product, vendor/awaken/config/common.mk)
-$(call inherit-product, vendor/awaken/config/gsm.mk)
+# Inherit some common stuff from RohieOS
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Gapps
 USE_GAPPS := true
@@ -42,9 +40,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := awaken_jasmine_sprout
+PRODUCT_NAME := aosp_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
+
+# Inherit RohieOS Official build stuff.
+ROHIE_MAINTAINER := ParasBansal25
+ROHIE_BUILD_TYPE := OFFICIAL
 
 # TWRP Support
 BUILD_TWRP := true
